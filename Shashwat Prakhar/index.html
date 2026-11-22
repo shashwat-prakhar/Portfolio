@@ -1,0 +1,410 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Shashwat Prakhar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: strict monochrome. Each section is a hairline-ruled row with a fixed label column on the left and content on the right. The one bold move is the oversized name; everything else stays quiet. */
+:root{
+  --bg:#ffffff; --fg:#0a0a0a; --soft:#3d3d3d; --muted:#6b6b6b; --line:#d6d6d6; --invert-bg:#0a0a0a; --invert-fg:#ffffff;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0a0a0a;--fg:#f5f5f5;--soft:#c4c4c4;--muted:#8f8f8f;--line:#2e2e2e;--invert-bg:#f5f5f5;--invert-fg:#0a0a0a;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0a0a0a;--fg:#f5f5f5;--soft:#c4c4c4;--muted:#8f8f8f;--line:#2e2e2e;--invert-bg:#f5f5f5;--invert-fg:#0a0a0a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--display);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+.mono{font-family:var(--mono)}
+
+/* nav */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;font:14px var(--mono)}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.nav a{text-decoration:none;color:var(--soft)}
+.nav a:hover{color:var(--fg);text-decoration:underline;text-underline-offset:5px}
+.theme{background:none;border:1px solid var(--line);color:var(--fg);font:13px var(--mono);padding:5px 10px;cursor:pointer}
+.theme:hover{background:var(--fg);color:var(--bg)}
+
+/* hero */
+.hero{padding-block:72px 88px}
+.hero h1{font-size:clamp(52px,12.5vw,168px);font-weight:800;letter-spacing:-.055em;line-height:.9}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;margin-top:56px;align-items:end}
+.hero p{margin:0;font-size:clamp(19px,2vw,24px);line-height:1.45;letter-spacing:-.015em;max-width:26em}
+.hero-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.pill{display:inline-block;padding:12px 20px;border:1px solid var(--fg);font:500 14px var(--mono);text-decoration:none}
+.pill.solid{background:var(--fg);color:var(--bg)}
+.pill:hover{background:var(--fg);color:var(--bg)}
+.pill.solid:hover{background:transparent;color:var(--fg)}
+
+/* rows */
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding-block:64px;border-top:1px solid var(--fg)}
+.label{font:500 14px var(--mono);color:var(--muted);align-self:start;position:sticky;top:24px}
+.lead{font-size:clamp(22px,2.6vw,32px);line-height:1.4;letter-spacing:-.025em;margin:0 0 20px;max-width:28em}
+.copy{color:var(--soft);margin:0 0 16px;max-width:38em}
+
+/* interests */
+.int{margin-top:40px;border-top:1px solid var(--line)}
+.int-row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.int-row h3{font-size:16px;font-weight:600}
+.pl{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.pl li{font:14px var(--mono);border:1px solid var(--fg);padding:6px 12px}
+@media (max-width:860px){.int-row{grid-template-columns:minmax(0,1fr);gap:12px}}
+
+/* skills */
+.sk{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.sk:first-child{padding-top:0}
+.sk h3{font-size:16px;font-weight:600}
+.sk div{color:var(--soft);font:14px/1.9 var(--mono)}
+
+/* projects */
+.proj{padding:34px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 32px;align-items:start}
+.proj:first-child{padding-top:0}
+.proj h3{font-size:clamp(26px,3.2vw,40px);font-weight:600;letter-spacing:-.035em;line-height:1.1}
+.proj .meta{font:13px var(--mono);color:var(--muted);margin-top:8px}
+.proj p{grid-column:1;margin:6px 0 0;color:var(--soft);max-width:36em}
+.proj ul{grid-column:1;margin:4px 0 0;padding:0;list-style:none;display:grid;gap:6px;color:var(--soft);font-size:15px}
+.proj li{padding-left:22px;position:relative}
+.proj li::before{content:"";position:absolute;left:0;top:.75em;width:10px;height:1px;background:var(--fg)}
+.proj .go{grid-column:2;grid-row:1;font:500 14px var(--mono);text-decoration:none;border-bottom:1px solid var(--fg);white-space:nowrap}
+.proj .go:hover{background:var(--fg);color:var(--bg)}
+.tags{grid-column:1;display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tags span{font:12.5px var(--mono);border:1px solid var(--line);padding:4px 10px;color:var(--soft)}
+
+/* education */
+.edu{display:grid;grid-template-columns:170px minmax(0,1fr);gap:32px;padding:30px 0;border-bottom:1px solid var(--line)}
+.edu:first-child{padding-top:0}
+.edu .yr{font:500 14px var(--mono);color:var(--muted)}
+.edu h3{font-size:clamp(22px,2.4vw,28px);font-weight:600;letter-spacing:-.025em;margin-bottom:4px}
+.edu .sub{color:var(--soft);margin:0}
+details{margin-top:16px}
+summary{cursor:pointer;font:500 13px var(--mono);list-style:none;display:inline-block;border-bottom:1px solid var(--fg)}
+summary::-webkit-details-marker{display:none}
+details[open] summary::after{content:" \2212"}
+details:not([open]) summary::after{content:" +"}
+.tw{overflow-x:auto;margin-top:16px}
+table{border-collapse:collapse;width:100%;min-width:320px;font-size:15px}
+th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+th{font:500 12.5px var(--mono);color:var(--muted)}
+td.n{font:14px var(--mono);font-variant-numeric:tabular-nums}
+td.i{padding-left:18px;color:var(--soft)}
+.res{font:13px var(--mono);color:var(--muted);margin:12px 0 0}
+
+.edu ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px;color:var(--soft);font-size:15px;max-width:40em}
+.edu li{padding-left:22px;position:relative}
+.edu li::before{content:"";position:absolute;left:0;top:.75em;width:10px;height:1px;background:var(--fg)}
+.edu .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.edu .tags span{font:12.5px var(--mono);border:1px solid var(--line);padding:4px 10px;color:var(--soft)}
+
+/* contact */
+.contact{background:var(--invert-bg);color:var(--invert-fg);border-top:0}
+.contact .row{border-top:0;padding-block:96px}
+.contact .label{color:color-mix(in srgb,var(--invert-fg) 60%,transparent)}
+.contact h2{font-size:clamp(40px,8vw,104px);font-weight:800;letter-spacing:-.05em;line-height:.95;margin-bottom:44px}
+.links{border-top:1px solid color-mix(in srgb,var(--invert-fg) 30%,transparent)}
+.link{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid color-mix(in srgb,var(--invert-fg) 30%,transparent);text-decoration:none;flex-wrap:wrap}
+.link:hover .v{text-decoration:underline;text-underline-offset:6px}
+.link .k{font:14px var(--mono);opacity:.65;min-width:90px}
+.link .v{font-size:clamp(18px,2.4vw,28px);letter-spacing:-.02em;overflow-wrap:anywhere;flex:1}
+.cp{background:none;border:1px solid var(--invert-fg);color:var(--invert-fg);font:13px var(--mono);padding:6px 12px;cursor:pointer}
+.cp:hover{background:var(--invert-fg);color:var(--invert-bg)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px 36px;font:13px var(--mono);color:color-mix(in srgb,var(--invert-fg) 60%,transparent)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--invert-fg)}
+
+/* one load moment */
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero h1{animation:up .8s both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+@media (max-width:860px){
+  .row{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:48px}
+  .label{position:static}
+  .hero{padding-block:48px 64px}
+  .hero-row{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:36px}
+  .hero-links{justify-content:flex-start}
+  .sk{grid-template-columns:minmax(0,1fr);gap:6px}
+  .edu{grid-template-columns:minmax(0,1fr);gap:8px}
+  .contact .row{padding-block:64px}
+}
+@media (max-width:560px){
+  .proj{grid-template-columns:minmax(0,1fr)}
+  .proj .go{grid-column:1;grid-row:auto;justify-self:start;margin-top:6px}
+}
+</style>
+
+<div class="wrap">
+  <nav class="nav" aria-label="Sections">
+    <span>shashwat-prakhar</span>
+    <div class="nav-links">
+      <a href="#about">About me</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="Shashwat_Prakhar_Resume.pdf" target="_blank" rel="noreferrer">Resume</a><a href="#contact">Contact</a>
+      <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <h1>Shashwat<br>Prakhar</h1>
+    <div class="hero-row">
+      <p>B.Tech Computer Science student at UPES Dehradun, specializing in AI and machine learning, with a focus on cybersecurity, cloud and DevOps.</p>
+      <div class="hero-links">
+        <a class="pill solid" href="#projects">See projects</a>
+        <a class="pill" href="#contact">Contact</a>
+        <a class="pill" href="Shashwat_Prakhar_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+  <div class="wrap">
+    <section class="row" id="about">
+      <div class="label">About me</div>
+      <div>
+        <p class="lead">I'm interested in how systems work, where they break, and how to make them safer and smarter.</p>
+        <p class="copy">My work sits in two connected areas: securing cloud environments and applying machine learning to real problems. I like working with data, building backend services, testing ideas and writing down what I learn.</p>
+        <p class="copy">I prefer clear problem statements, reproducible experiments and honest evaluation. A project is only useful when its claims can be explained and its limits are understood.</p>
+        <div class="int">
+          <div class="int-row"><h3>Technical interests</h3><ul class="pl"><li>Artificial intelligence and machine learning</li><li>Cybersecurity</li><li>Cloud</li><li>DevOps</li></ul></div>
+          <div class="int-row"><h3>Personal interests</h3><ul class="pl"><li>Music</li><li>Sports: UFC and MotoGP</li><li>Cooking</li><li>Movies</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row" id="skills">
+      <div class="label">Skills</div>
+      <div>
+        <div class="sk"><h3>Programming</h3><div>Python, Java, SQL, JavaScript, C / C++, data structures and algorithms, OOP</div></div>
+        <div class="sk"><h3>Security and cloud</h3><div>Cloud security, AWS telemetry, threat analysis, MITRE ATT&amp;CK, email forensics</div></div>
+        <div class="sk"><h3>AI and machine learning</h3><div>Supervised learning, deep learning, LSTM, transfer learning, CNN, object detection, YOLO, NLTK, scikit-learn, TensorFlow, PyTorch, Keras, XGBoost, anomaly detection</div></div>
+        <div class="sk"><h3>Tools and frameworks</h3><div>FastAPI, Flask, Spring Boot, Hibernate, Maven, PostgreSQL, Docker, GitHub Actions, Streamlit, NumPy, Pandas, Git and GitHub, Linux, REST APIs</div></div>
+      </div>
+    </section>
+
+    <section class="row" id="experience">
+      <div class="label">Experience</div>
+      <div>
+        <div class="edu">
+          <div class="yr">Jun - Jul 2026</div>
+          <div>
+            <h3>Aimbeyond Infotech Pvt. Ltd.</h3>
+            <p class="sub">Internship, Noida</p>
+            <ul>
+              <li>Designed and implemented backend services for a scalable recommendation engine that delivers personalized content based on user interactions.</li>
+              <li>Used Spring Boot and Maven with OOP principles to build modular, maintainable backend services.</li>
+            </ul>
+            <div class="tags"><span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>Maven</span></div>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="yr">Jun - Jul 2025</div>
+          <div>
+            <h3>Nexa E-Waste Management Pvt. Ltd.</h3>
+            <p class="sub">Internship, Patna</p>
+            <ul>
+              <li>Researched sustainable e-waste management practices and analyzed recycling methods.</li>
+              <li>Investigated electronic waste disposal strategies and documented the findings on recycling.</li>
+            </ul>
+            <div class="tags"><span>Research</span><span>Sustainability analysis</span><span>Technical documentation</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row" id="projects">
+      <div class="label">Projects</div>
+      <div>
+        <article class="proj">
+          <div>
+            <h3>CloudGuard</h3>
+            <div class="meta">Cloud security, machine learning</div>
+          </div>
+          <a class="go" href="https://github.com/shashwat-prakhar/cloud-guard" target="_blank" rel="noreferrer">Repository &#8599;</a>
+          <p>An AI-powered cloud security monitoring platform that detects AWS misconfigurations and anomalous activity. It combines rule-based detection with machine learning, and uses an LLM only to explain findings, not to decide them.</p>
+          <ul>
+            <li>Detection rules mapped to MITRE and CIS</li>
+            <li>Ingests AWS CloudTrail, VPC Flow Logs and AWS Config</li>
+            <li>Isolation Forest anomaly detection</li>
+            <li>Advisory-only LLM explanations</li>
+            <li>React SOC dashboard with schema-validated incident explanations and remediation guidance</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>FastAPI</span><span>AWS</span><span>SQLite</span><span>scikit-learn</span><span>React</span></div>
+        </article>
+
+        <article class="proj">
+          <div>
+            <h3>JobPilot</h3>
+            <div class="meta">LLM agent, retrieval</div>
+          </div>
+          <p>An LLM job-matching agent that chats with users, searches live postings and returns ranked jobs with grounded reasons for each match.</p>
+          <ul>
+            <li>Hybrid retrieval over an idempotent pipeline that indexes live job postings</li>
+            <li>Evaluation harness with a CI gate</li>
+            <li>Shipped with FastAPI, Docker and GitHub Actions</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Alembic</span><span>sentence-transformers</span><span>Docker</span><span>Streamlit</span></div>
+        </article>
+
+        <article class="proj">
+          <div>
+            <h3>Phishing Email Analysis</h3>
+            <div class="meta">Cybersecurity, SOC</div>
+          </div>
+          <a class="go" href="https://github.com/shashwat-prakhar/Phishing-Email-Analysis" target="_blank" rel="noreferrer">Repository &#8599;</a>
+          <p>A Python tool for phishing email analysis and SOC threat triage. It reads message headers, validates authentication, pulls out indicators and scores the risk of each email.</p>
+          <ul>
+            <li>Header forensics and SPF, DKIM and DMARC validation</li>
+            <li>IOC extraction and risk scoring</li>
+            <li>MITRE ATT&amp;CK mapping</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Email forensics</span><span>MITRE ATT&amp;CK</span></div>
+        </article>
+
+        <article class="proj">
+          <div>
+            <h3>Parkinson's Disease Detection</h3>
+            <div class="meta">Machine learning, healthcare</div>
+          </div>
+          <a class="go" href="https://github.com/shashwat-prakhar/parkinson-disease-detection" target="_blank" rel="noreferrer">Repository &#8599;</a>
+          <p>A machine learning pipeline that classifies Parkinson's disease from structured acoustic features, from preprocessing and feature engineering through to model evaluation.</p>
+          <ul>
+            <li>Feature engineering and Chi-square feature selection</li>
+            <li>SMOTE to balance the classes</li>
+            <li>XGBoost and SVM models</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>XGBoost</span><span>SVM</span></div>
+        </article>
+
+        <article class="proj">
+          <div>
+            <h3>Alzheimer's Progression via Discourse</h3>
+            <div class="meta">NLP, healthcare</div>
+          </div>
+          <a class="go" href="https://github.com/shashwat-prakhar/Alzheimer-s-Progression-via-Discourse" target="_blank" rel="noreferrer">Repository &#8599;</a>
+          <p>An AI-powered Flask web application for early detection and progression tracking of Alzheimer's disease from speech. It addresses the cost, invasiveness and time of traditional diagnostic methods.</p>
+          <ul>
+            <li>Speech transcription with Faster-Whisper</li>
+            <li>18 linguistic and behavioral features, including lexical richness, syntactic complexity, filler words, repetition and information density</li>
+            <li>Tracks progression over time, not only presence of the disease</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Flask</span><span>Faster-Whisper</span><span>NLTK</span><span>scikit-learn</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="row" id="education">
+      <div class="label">Education</div>
+      <div>
+        <div class="edu">
+          <div class="yr">Aug 2023 - Present</div>
+          <div>
+            <h3>UPES, Dehradun</h3>
+            <p class="sub">B.Tech in Computer Science, specialization in Artificial Intelligence and Machine Learning. CGPA: 7.6 / 10.</p>
+          </div>
+        </div>
+
+        <div class="edu">
+          <div class="yr">2023</div>
+          <div>
+            <h3>Class XII, CBSE</h3>
+            <p class="sub">Dr. DY Patil, Patna, Bihar. CBSE. 85%.</p>
+            <details>
+              <summary>Subject marks</summary>
+              <div class="tw"><table>
+                <thead><tr><th>Subject</th><th>Marks</th><th>Grade</th></tr></thead>
+                <tbody>
+                  <tr><td>English Core</td><td class="n">85</td><td class="n">B1</td></tr>
+                  <tr><td>Physics</td><td class="n">92</td><td class="n">A1</td></tr>
+                  <tr><td>Chemistry</td><td class="n">80</td><td class="n">A2</td></tr>
+                  <tr><td>Mathematics</td><td class="n">74</td><td class="n">B1</td></tr>
+                  <tr><td>Computer Science</td><td class="n">68</td><td class="n">C2</td></tr>
+                  <tr><td>Work Experience</td><td class="n">&ndash;</td><td class="n">A1</td></tr>
+                  <tr><td>Health and Physical Education</td><td class="n">&ndash;</td><td class="n">A1</td></tr>
+                  <tr><td>General Studies</td><td class="n">&ndash;</td><td class="n">A1</td></tr>
+                </tbody>
+              </table></div>
+            </details>
+          </div>
+        </div>
+
+        <div class="edu">
+          <div class="yr">2021</div>
+          <div>
+            <h3>Class X, ICSE</h3>
+            <p class="sub">St. Xavier's High School, Patna, Bihar. ICSE. 90%.</p>
+            <details>
+              <summary>Subject marks</summary>
+              <div class="tw"><table>
+                <thead><tr><th>Subject</th><th>Marks</th></tr></thead>
+                <tbody>
+                  <tr><td>English</td><td class="n">79</td></tr>
+                  <tr><td class="i">English Language</td><td class="n">72</td></tr>
+                  <tr><td class="i">Literature in English</td><td class="n">86</td></tr>
+                  <tr><td>Hindi</td><td class="n">91</td></tr>
+                  <tr><td>History, Civics and Geography</td><td class="n">91</td></tr>
+                  <tr><td class="i">History and Civics</td><td class="n">86</td></tr>
+                  <tr><td class="i">Geography</td><td class="n">96</td></tr>
+                  <tr><td>Mathematics</td><td class="n">80</td></tr>
+                  <tr><td>Science</td><td class="n">82</td></tr>
+                  <tr><td class="i">Physics</td><td class="n">78</td></tr>
+                  <tr><td class="i">Chemistry</td><td class="n">75</td></tr>
+                  <tr><td class="i">Biology</td><td class="n">92</td></tr>
+                  <tr><td>Computer Applications</td><td class="n">96</td></tr>
+                  <tr><td>SUPW and Community Service</td><td class="n">Grade A</td></tr>
+                </tbody>
+              </table></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="row">
+        <div class="label">Contact</div>
+        <div>
+          <h2>Let's talk.</h2>
+          <div class="links">
+            <div class="link"><span class="k">Email</span><a class="v" id="mail" href="mailto:shashwatprakhar16@gmail.com">shashwatprakhar16@gmail.com</a><button class="cp" id="copy" type="button">Copy</button></div>
+            <a class="link" href="https://www.linkedin.com/in/shashwat-prakhar/" target="_blank" rel="noreferrer"><span class="k">LinkedIn</span><span class="v">linkedin.com/in/shashwat-prakhar</span><span aria-hidden="true">&#8599;</span></a>
+            <a class="link" href="https://github.com/shashwat-prakhar" target="_blank" rel="noreferrer"><span class="k">GitHub</span><span class="v">github.com/shashwat-prakhar</span><span aria-hidden="true">&#8599;</span></a>
+            <a class="link" href="Shashwat_Prakhar_Resume.pdf" target="_blank" rel="noreferrer"><span class="k">Resume</span><span class="v">View PDF</span><span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><span>&copy; 2026 Shashwat Prakhar</span><a href="#top">Back to top</a></div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") root.setAttribute("data-theme", t); } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function(){
+    var cur = root.getAttribute("data-theme") ||
+      (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var next = cur === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+  var btn = document.getElementById("copy");
+  btn.addEventListener("click", function(){
+    var addr = "shashwatprakhar16@gmail.com";
+    var done = function(){ btn.textContent = "Copied"; setTimeout(function(){ btn.textContent = "Copy"; }, 1600); };
+    var fail = function(){
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("mail"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Press copy";
+    };
+    try { navigator.clipboard.writeText(addr).then(done, fail); } catch (e) { fail(); }
+  });
+})();
+</script>
+
+</body></html>
